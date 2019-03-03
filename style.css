@@ -1,0 +1,93 @@
+/* css grid */
+.header {
+  grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
+  border-right: 1px dotted black;
+  padding-right: 1em;
+}
+
+.menu > a {
+  display: block;
+  text-decoration: none;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-areas:
+    'header header header header'
+    'menu content content content'
+    'footer footer footer footer';
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+body {
+  background-color: orange;
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lucida Console", monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+/* css for tooltip copied and modified from https://www.w3schools.com/css/css_tooltip.asp */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px; /* ...about tree fiddy */
+  background-color: black;
+  color: orange;
+  text-align: left;
+  border-radius: 8px;
+  padding: 8px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 2em;
+  left: 0%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.width-small {
+  width: 200px !important;
+}
